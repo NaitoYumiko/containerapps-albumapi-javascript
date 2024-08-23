@@ -1,8 +1,15 @@
  name: Trigger auto deployment
  on:
    # 手動実行用トリガー
-   workflow_dispatch: 
-  # Add env
+   workflow_dispatch:     
+   # Add a trigger
+   # 自動実行用トリガー
+   push:
+     branches: 
+       [ main ]
+     paths:
+     - '**'
+ # Add env
  env:
    CONTAINER_REGISTRY:  tie210061cnmbicmxwxiiu.azurecr.io
    # Add envs
